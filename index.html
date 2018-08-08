@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        </head>
+    <body>
+        <div id="app">
+            <input type="text" v-on:input="changeTitle" />
+            <p>{{ title }}<a v-bind:href="getLink()">NBA</a></p>
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    title: 'nir',
+                    link: 'https://www.nba.com'
+                },
+                methods: {
+                    changeTitle: function(event) {
+                        this.title = event.target.value;
+                        this.link = event.target.value;
+                    },
+                    getLink: function() {
+                        return 'niro';
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
